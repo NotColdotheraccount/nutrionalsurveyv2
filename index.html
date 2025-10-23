@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Survey 0.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form class="form-container" id="surveyForm">
+    <h1>Nutrition Survey 0.2</h1>
+    <p>Welcome!<br><br>
+        This short experiment tests how people make quick product decisions.
+        Please respond naturally — the form records how long you take to decide.
+        <br><br>Once you begin, please complete it in one sitting without refreshing or going back.</p>
+
+    <!-- Timer (hidden until confirmed) -->
+    <div class="timer" id="timer" style="display:none;">Time taken: 0s</div>
+
+    <!-- Name input -->
+    <label><strong>Full Name:</strong></label><br>
+    <label for="fullname"><input type="text" id="fullname" name="fullname" required style="width:100%;padding:8px;margin-top:6px;"/></label>
+    <button type="button" id="confirmNameBtn" class="submit-btn" style="background-color:#34a853;">Confirm Name</button>
+
+    <!-- Survey questions section (hidden at first) -->
+    <div id="surveySection" style="display:none; margin-top:25px;">
+        <div class="section">
+            <p><strong>Please read the following product description carefully and answer the question below as quickly as you can.</strong></p>
+
+            <div class="question">
+                <img src="images/Yogurtv2.jpeg" alt="AlpineChoice Yogurt">
+                <p><strong>Would you buy this product?</strong></p>
+
+                <label class="option"><input type="radio" name="buy" value="Yes" required> Yes</label><br>
+                <br>
+                <label class="option"><input type="radio" name="buy" value="No"> No</label>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </div>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
