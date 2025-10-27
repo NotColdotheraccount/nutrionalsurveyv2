@@ -10,17 +10,22 @@
 <form class="form-container" id="surveyForm">
     <h1>Nutrition Survey 0.2</h1>
     <p>Welcome!<br><br>
-        This short experiment tests how people make quick product decisions.
-        Please respond naturally — the form records how long you take to decide.
-        <br><br>Once you begin, please complete it in one sitting without refreshing or going back.</p>
+        <b><u>Participant Information and Consent<br><br></u></b>
+        You are invited to take part in a short study about how people form impressions of food products. This study is part of the University of Applied Sciences of the Grisons project in Behavioural Economics and Marketing by four bachelor students and is conducted purely for educational purposes. Participation takes about 4 minutes, and the survey is completely anonymous and voluntary, therefore you may stop at any time without penalty.
+        Your responses will be kept secure and used only in aggregated form for analysis.
+        By clicking “I consent”, you confirm that you are 18 or older and agree to take part.</p>
 
-    <!-- Timer (hidden until confirmed) -->
-    <div class="timer" id="timer"></div>
+    <!-- Hidden timer -->
+    <div class="timer" id="timer">Time taken: 0s</div>
 
-    <!-- Name input -->
-    <label><strong>Full Name:</strong></label><br>
-    <label for="fullname"><input type="text" id="fullname" name="fullname" required style="width:100%;padding:8px;margin-top:6px;"/></label>
-    <button type="button" id="confirmNameBtn" class="submit-btn" style="background-color:#34a853;">Confirm Name</button>
+    <!-- Consent buttons (replace name input) -->
+    <div id="consentBlock">
+        <p><strong>Do you consent to participate?</strong></p>
+        <div class="consent-row">
+            <button type="button" id="consentYesBtn" class="submit-btn consent-yes">I consent</button>
+            <button type="button" id="consentNoBtn" class="submit-btn consent-no">No, I don’t consent</button>
+        </div>
+    </div>
 
     <!-- Survey questions section (hidden at first) -->
     <div id="surveySection" style="display:none; margin-top:25px;">

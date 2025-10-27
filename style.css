@@ -62,17 +62,34 @@ p {
     width: auto;
 }
 
+.submit-btn[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
 .submit-btn:hover {
     background-color: #357ae8;
 }
 
+/* Timer is hidden but functional */
 .timer {
-    font-size: 14px;
-    color: #5f6368;
-    text-align: right;
+    display: none;
 }
 
-/* ✅ Added for mobile responsiveness */
+/* Consent buttons row */
+.consent-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+.consent-yes {
+    background-color: #34a853;
+}
+.consent-no {
+    background-color: red;
+}
+
+/* Responsive for mobile */
 @media (max-width: 480px) {
     body {
         padding: 20px 10px;
@@ -103,8 +120,8 @@ p {
         font-size: 16px;
     }
 
-    input[type="text"] {
-        font-size: 16px;
-        padding: 10px;
+    /* Stack consent buttons on small screens */
+    .consent-row {
+        flex-direction: column;
     }
 }
