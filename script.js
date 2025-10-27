@@ -24,7 +24,6 @@ confirmBtn.addEventListener('click', () => {
     // Start timer
     timerInterval = setInterval(() => {
         seconds++;
-        timer.textContent = `Time taken: ${seconds}s`;
     }, 1000);
 });
 
